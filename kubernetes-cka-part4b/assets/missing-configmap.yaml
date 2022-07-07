@@ -1,0 +1,20 @@
+# configmap-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: configmap-pod
+  namespace: beta
+spec:
+  containers:
+    - name: test-container
+      image: gcr.io/google_containers/busybox
+      command: [ "/bin/sh", "-c", "env" ]
+      env:
+        - name: SPECIAL_LEVEL_KEY
+          valueFrom:
+            configMapKeyRef:
+              name: special-config
+              key: special.how
+
+  restartPolicy: Never        
+
