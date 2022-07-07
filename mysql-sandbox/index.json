@@ -1,0 +1,29 @@
+{
+  "title": "MySQL Sandbox",
+  "description": "MySQL Sandbox",
+  "private": true,
+  "details": {
+    "steps": [
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideintro": true,
+    "showide": true,
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Display 80", "port": 80},
+      {"name": "Display 8080", "port": 8080}
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
