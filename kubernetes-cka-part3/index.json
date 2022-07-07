@@ -1,0 +1,86 @@
+{
+  "title": "Kubernetes for CKA - part 3",
+  "description": "Networking scenarios",
+  "difficulty": "intermediate",
+  "time": "45-60 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Networking",
+        "text": "step1.md",
+        "verify": "step1-verify.sh",
+        "background": "step1-background.sh",
+        "foreground": "step1-foreground.sh",
+        "answer": "step1-answer.md"
+      },
+      {
+        "title": "Networking",
+        "text": "step2.md",
+        "verify": "step2-verify.sh",
+        "background": "step2-background.sh",
+        "foreground": "step2-foreground.sh",
+        "answer": "step2-answer.md"
+      },
+      {
+        "title": "Networking",
+        "text": "step3.md",
+        "verify": "step3-verify.sh",
+        "background": "step3-background.sh",
+        "foreground": "step3-foreground.sh",
+        "answer": "step3-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "000.intro.md",
+      "credits": "https://kubernetes.io/",
+      "courseData": "install.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "wait.sh",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": ".bashrc",
+          "target": "/root/"
+        }
+      ],
+      "host02": [
+        {
+          "file": "wait.sh",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": ".bashrc",
+          "target": "/root/"
+        }
+      ]
+    }
+  },
+
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Kubernetes.io",
+        "href": "https://kubernetes.io/docs/home/"
+      },
+
+      {"name": "WeaveScope on 4040 port", "port": 4040},
+      {"name": "Yaobank on 8080 port", "port": 8080}
+    ],
+  
+    "hideintro": false,
+    "uilayout": "terminal-iframe",
+    "uimessage1": "\u001b[32mSetting up your Kubernetes playground...\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
