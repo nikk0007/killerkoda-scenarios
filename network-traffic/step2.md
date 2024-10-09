@@ -1,10 +1,12 @@
 
-> Services need to run on all interfaces (like 0.0.0.0) and not just localhost
+> Services need to run on all interfaces (like 0.0.0.0) and not just localhost.
+<br>
+> Services need to be accessible via HTTP and **not** HTTPS.
 
 Expose Apache on port 1234 using Docker:
 
 ```
-docker run -p 1234:80 httpd:alpine
+docker run -d -p 1234:80 httpd:alpine
 ```{{exec}}
 
 Now access Apache using this link:
